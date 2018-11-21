@@ -1,0 +1,20 @@
+@font-face {
+	font-family: Roboto Condensed Light;
+	src: url("RobotoCondensed-Light.ttf");
+	src: url("./fonts/RobotoCondensed-Light.ttf");
+}
+
+#breakoutcanvas {
+	border: 1px solid white;
+    display: none;
+}
+
+body {
+	background-color: black;
+	color: white;
+	font-family: 'Roboto Condensed Light';
+}
+
+h1 {
+	margin-bottom: 15px;
+}

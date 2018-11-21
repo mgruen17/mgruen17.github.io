@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<title>BreakOut</title>
+	<link rel="stylesheet" type="text/css" href="css/breakout.css">
+</head>
+
+<body>
+	<h1>BreakOut</h1>
+    <span id="difficultyText">Select difficulty: </span>
+    <select id="difficulty">
+        <option value="4">Super Easy</option>
+        <option value="3">Easy</option>
+        <option value="2" selected="selected">Medium</option>
+        <option value="1">Hard</option>
+    </select>
+    <button id="start">Start</button>
+	<p id="canvas">
+		<canvas id="breakoutcanvas" width="600" height="500"></canvas>
+	</p>
+	<script src="app/gameobjects/Ball.js"></script>
+	<script src="app/gameobjects/Paddle.js"></script>
+	<script src="app/gameobjects/Brick.js"></script>
+	<script src="app/CollisionChecker.js"></script>
+	<script src="app/BreakOutGame.js"></script>
+</body>
+
+</html>
