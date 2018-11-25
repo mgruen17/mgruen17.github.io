@@ -213,7 +213,7 @@ var breakOutGame = (function () {
         balls[0] = ball;
     }
 
-    function updatePaddlePosition() {
+    function updatePaddlePosition(event) {
 
         // Read mouse position from event
         var newX = event.layerX;
