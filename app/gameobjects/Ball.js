@@ -23,16 +23,22 @@ class Ball {
         this.xPos += this.accelerationX;
         this.yPos += this.accelerationY;
 
+        // Check if ball collided with wall
         this.checkWallCollision();
     }
 
     checkWallCollision() {
+        // Ball hits right or left wall
         if (this.xPos <= 0 + this.radius || this.xPos >= this.context.canvas.clientWidth - this.radius) {
             this.bounceVertically();
         }
+        
+        // Ball hits top wall
         if (this.yPos <= 0 + this.radius) {
             this.bounceHorizontally();
         }
+        
+        // Bottom wall => ball is falling out of the game, stop the ball
         if (this.yPos - this.radius >= this.context.canvas.clientHeight) {
             this.accelerationX = 0;
             this.accelerationY = 0;
@@ -40,10 +46,24 @@ class Ball {
         }
     }
 
+    // Horizontal bounce:
+    // O......../
+    // .\....../.
+    // ..\..../..
+    // ...\../...
+    // ____\/____
+    // ..........
     bounceHorizontally() {
         this.accelerationY *= -1;
     }
 
+    // Vertical bounce:
+    // O..|.
+    // .\.|.
+    // ..\|.
+    // ../|.
+    // ./.|.
+    // /..|.
     bounceVertically() {
         this.accelerationX *= -1;
     }

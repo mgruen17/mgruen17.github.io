@@ -62,6 +62,7 @@ var collisionChecker = (function () {
                     // If the item is not a brick, it is the paddle.
                     // No further checks: bounce.
                     if (!isBrick) {
+                        //ball.bounceHorizontallyWithVariation(2*(((ball.xPos > itemRight ? itemRight : ball.xPos < itemLeft ? itemLeft : ball.xPos) - item.xPos) - (item.width / 2)) / (item.width / 2));
                         ball.bounceHorizontally();
                         collision = true;
                     }
@@ -71,7 +72,7 @@ var collisionChecker = (function () {
                     if (isBrick && ((ball.xPos >= itemLeft - Math.ceil(margin / 2) && ball.xPos <= itemRight + Math.ceil(margin / 2)))) {
                         // Raise the brick's hitCount by 1
                         item.count();
-                        
+
                         ball.bounceHorizontally();
                         collision = true;
                     }
@@ -101,7 +102,7 @@ var collisionChecker = (function () {
                     if (isBrick && ((ball.yPos >= itemTop - Math.ceil(margin / 2) && ball.yPos <= itemBottom + Math.ceil(margin / 2)))) {
                         // Raise the brick's hitCount by 1
                         item.count();
-                        
+
                         ball.bounceVertically();
                         collision = true;
                     }

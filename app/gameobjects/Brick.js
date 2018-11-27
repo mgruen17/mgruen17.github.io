@@ -34,7 +34,8 @@ class Brick {
     count() {
         this.hitCount++;
     }
-
+    
+    // Checks, if brick has to disappear
     active() {
         return this.hitCount < this.hitsToDisappear;
     }
